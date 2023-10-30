@@ -1,8 +1,8 @@
-import style from "./ItemListContainer.modules.css"
+import style from "./ItemListContainer.module.css"
 export default function ItemListContainer({titulo}) {
   return (
-    <div className="contendorTitulo">
-    <h1 className="tituloProp">{titulo}</h1>
+    <div className={style.contendorTitulo}>
+    <h1 className={style.tituloProp}>{titulo}</h1>
     </div>
   )
 }
