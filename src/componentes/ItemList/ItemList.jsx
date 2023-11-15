@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import style from "./ItemList.module.css";
 import Item from "../Item/Item";
+import axios from "axios"
 
 export default function ItemList() {
   const [array, setArray] = useState([])
@@ -9,9 +10,9 @@ export default function ItemList() {
   useEffect(() => {
     setCargando(true)
     setTimeout(() => {
-      fetch("https://fakestoreapi.com/products")
-      .then((r) => r.json())
-      .then((r) => setArray(r));
+      axios.get("https://fakestoreapi.com/products").then((response) => {
+        setArray(response.data);
+      });
       setCargando(false)
     }, 5000);
   }, [])

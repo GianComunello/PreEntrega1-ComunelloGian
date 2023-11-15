@@ -8,7 +8,7 @@ function App() {
   return (
     <>
      <Navbar/>
-     <ItemListContainer titulo="Soy un titulo pasado por prop"/>
+     <ItemListContainer titulo="Bienvenidos a mi tienda"/>
     </>
   )
 }
